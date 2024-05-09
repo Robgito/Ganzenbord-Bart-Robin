@@ -7,7 +7,6 @@ namespace GanzenBord.Business.Spaces
     {
         ISpaceFactory SpaceFactory { get; set; }
         List<ISpace> Spaces { get; set; }
-
         List<ISpace> PrintSpaces();
     }
 }

@@ -15,6 +15,7 @@ namespace Ganzenbord.Business.Tests.Spaces
         [Test]
         public void WhenPlayerLandsOnPrisonSpace_ThenPlayerSkips3Turn()
         {
+            //Arrange
             int expectedTurnSkips = 3;
 
             Mock<ILogger> mockLogger = new Mock<ILogger>();
@@ -22,8 +23,10 @@ namespace Ganzenbord.Business.Tests.Spaces
             IPlayer testPlayer = new Player.Player("testPlayer", mockLogger.Object);
             ISpace testPrisonSpace = new PrisonSpace(10, mockLogger.Object);
 
+            //Act
             testPrisonSpace.SpaceEffect(testPlayer);
 
+            //Assert
             Assert.That(expectedTurnSkips, Is.EqualTo(testPlayer.TurnsToSkip));
         }
     }

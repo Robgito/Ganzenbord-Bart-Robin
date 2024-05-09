@@ -13,7 +13,6 @@ namespace Ganzenbord.Business.Spaces
             SpaceID = spaceID;
             Logger = logger;
         }
-
         public virtual void SpaceEffect(IPlayer player)
         {
             Logger.PrintMessage($"{player.Name} lands on space nr. {this.SpaceID}!");

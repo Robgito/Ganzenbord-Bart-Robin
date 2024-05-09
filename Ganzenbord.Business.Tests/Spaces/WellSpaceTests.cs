@@ -15,6 +15,7 @@ namespace Ganzenbord.Business.Tests.Spaces
         [Test]
         public void WhenPlayerLandsOnWellSpace_ThenPlayerIsUnableToMove()
         {
+            //Arrange
             bool expectedMovement = false;
 
             Mock<ILogger> mockLogger = new Mock<ILogger>();
@@ -30,6 +31,7 @@ namespace Ganzenbord.Business.Tests.Spaces
         [Test]
         public void WhenNewPlayerLandsOnAWell_ThenPlayerStuckGetsRescued()
         {
+            //Arrange
             bool expectedMovementPlayer1 = true;
 
             Mock<ILogger> mockLogger = new Mock<ILogger>();
@@ -38,10 +40,12 @@ namespace Ganzenbord.Business.Tests.Spaces
             testPlayer1.CanMove = false;
             IPlayer testPlayer2 = new Player.Player("testPlayer", mockLogger.Object);
             WellSpace testWellSpace = new WellSpace(10, mockLogger.Object);
-            testWellSpace.PlayerStuckInWell = testPlayer1; 
+            testWellSpace.PlayerStuckInWell = testPlayer1;
 
+            //Act
             testWellSpace.SpaceEffect(testPlayer2);
 
+            //Assert
             Assert.That(testPlayer1.CanMove, Is.EqualTo(expectedMovementPlayer1));
         }
     }

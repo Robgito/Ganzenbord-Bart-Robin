@@ -31,7 +31,7 @@ namespace GanzenBord.Business
 
         public IPlayer CreatePlayer(int playerNumber)
         {
-            logger.PrintMessage($"Please enter your name player {playerNumber}: ");
+            logger.PrintMessage($"Please enter your name player {playerNumber}:");
             return playerFactory.Create(logger.ReadInput());
         }
 
@@ -49,7 +49,7 @@ namespace GanzenBord.Business
 
         public void EndGame()
         {
-            logger.PrintMessage("Thanks for playing!");
+            logger.PrintMessage("Thanks for playing Game Of Goose!");
             logger.ReadInput();
         }
 
@@ -105,14 +105,14 @@ namespace GanzenBord.Business
                 {
                     if (player.lastRoll[0] == 4 || player.lastRoll[1] == 4)
                     {
-                        logger.PrintMessage($"{player.Name} rolled {player.lastRoll.Sum()} with 4 + 5!");
+                        logger.PrintMessage($"{player.Name} rolled {player.lastRoll.Sum()} with {player.lastRoll[0]} + {player.lastRoll[1]}!");
                         firstTurn9Roll = true;
                         player.MoveTo(26);
                         board.Spaces[player.CurrentSpace].SpaceEffect(player);
                     }
                     if (player.lastRoll[0] == 3 || player.lastRoll[1] == 3)
                     {
-                        logger.PrintMessage($"{player.Name} rolled {player.lastRoll.Sum()} with 3 + 6!");
+                        logger.PrintMessage($"{player.Name} rolled {player.lastRoll.Sum()} with {player.lastRoll[0]} + {player.lastRoll[1]}!");
                         firstTurn9Roll = true;
                         player.MoveTo(53);
                         board.Spaces[player.CurrentSpace].SpaceEffect(player);

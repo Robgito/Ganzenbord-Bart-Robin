@@ -15,6 +15,7 @@ namespace Ganzenbord.Business.Tests.Spaces
         [Test]
         public void WhenPlayerLandsOnDeath_ThenPlayerGoesToStart()
         {
+            //Arrange
             int expectedSpace = 0;
 
             Mock<ILogger> mockLogger = new Mock<ILogger>();
@@ -23,8 +24,10 @@ namespace Ganzenbord.Business.Tests.Spaces
             testPlayer.CurrentSpace = 50;
             ISpace testDeathSpace = new DeathSpace(10, mockLogger.Object);
 
+            //Act
             testDeathSpace.SpaceEffect(testPlayer);
 
+            //Assert
             Assert.That(testPlayer.CurrentSpace, Is.EqualTo(expectedSpace));
         }
     }
