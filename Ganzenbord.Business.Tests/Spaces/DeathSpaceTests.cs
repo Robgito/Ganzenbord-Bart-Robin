@@ -21,6 +21,7 @@ namespace Ganzenbord.Business.Tests.Spaces
             Mock<ILogger> mockLogger = new Mock<ILogger>();
 
             IPlayer testPlayer = new Player.Player("testPlayer", mockLogger.Object);
+            testPlayer.CurrentSpace = 50;
             ISpace testDeathSpace = new DeathSpace(10, mockLogger.Object);
 
             //Act

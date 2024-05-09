@@ -1,10 +1,5 @@
 ﻿using Ganzenbord.Business.Logger;
 using Ganzenbord.Business.Player;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ganzenbord.Business.Spaces
 {
@@ -21,7 +16,50 @@ namespace Ganzenbord.Business.Spaces
         public override void SpaceEffect(IPlayer player)
         {
             player.CurrentSpace = 0;
+            printDeath();
             Logger.PrintMessage($"{player.Name} landed on Death! Go back to start!");
+        }
+
+        public void printDeath()
+        {
+            Logger.PrintMessage("                                           .\"\"--.._");
+            Logger.PrintMessage("                                           []      `'--.._");
+            Logger.PrintMessage("                                           ||__           `'-,");
+            Logger.PrintMessage("                                         `)||_ ```'--..       \\");
+            Logger.PrintMessage("                     _                    /|//}        ``--._  |");
+            Logger.PrintMessage("                  .'` `'.                /////}              `\\/");
+            Logger.PrintMessage("                 /  .\"\"\".\\              //{///    ");
+            Logger.PrintMessage("                /  /_  _`\\\\            // `||");
+            Logger.PrintMessage("                | |(_)(_)||          _//   ||");
+            Logger.PrintMessage("                | |  /\\  )|        _///\\   ||");
+            Logger.PrintMessage("                | |L====J |       / |/ |   ||");
+            Logger.PrintMessage("               /  /'-..-' /    .'`  \\  |   ||");
+            Logger.PrintMessage("              /   |  :: | |_.-`      |  \\  ||");
+            Logger.PrintMessage("             /|   `\\-::.| |          \\   | ||");
+            Logger.PrintMessage("           /` `|   /    | |          |   / ||");
+            Logger.PrintMessage("         |`    \\   |    / /          \\  |  ||");
+            Logger.PrintMessage("        |       `\\_|    |/      ,.__. \\ |  ||");
+            Logger.PrintMessage("        /                     /`    `\\ ||  ||");
+            Logger.PrintMessage("       |           .         /        \\||  ||");
+            Logger.PrintMessage("       |                     |         |/  ||");
+            Logger.PrintMessage("       /         /           |         (   ||");
+            Logger.PrintMessage("      /          .           /          )  ||");
+            Logger.PrintMessage("     |            \\          |             ||");
+            Logger.PrintMessage("    /             |          /             ||");
+            Logger.PrintMessage("   |\\            /          |              ||");
+            Logger.PrintMessage("   \\ `-._       |           /              ||");
+            Logger.PrintMessage("    \\ ,//`\\    /`           |              ||");
+            Logger.PrintMessage("     ///\\  \\  |             \\              ||");
+            Logger.PrintMessage("    |||| ) |__/             |              ||");
+            Logger.PrintMessage("    |||| `.(                |              ||");
+            Logger.PrintMessage("    `\\\\` /`                 /              ||");
+            Logger.PrintMessage("       /`                   /              ||");
+            Logger.PrintMessage("      /                     |              ||");
+            Logger.PrintMessage("     |                      \\              ||");
+            Logger.PrintMessage("    /                        |             ||");
+            Logger.PrintMessage("  /`                          \\            ||");
+            Logger.PrintMessage("/`                            |            ||");
+            Logger.PrintMessage("`-.___,-.      .-.        ___,'            ||");
         }
     }
 }
