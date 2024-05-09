@@ -39,6 +39,10 @@ namespace GanzenBord.Business
         public IPlayer CreatePlayer(int playerNumber)
         {
             logger.PrintMessage($"Please enter your name player {playerNumber}:");
+            while (string.IsNullOrWhiteSpace(logger.ReadInput()))
+            {
+                logger.PrintMessage($"You did not enter a name for player {playerNumber}, please enter a name:");
+            }
             return playerFactory.Create(logger.ReadInput());
         }
 
