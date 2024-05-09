@@ -5,11 +5,6 @@ using GanzenBord.Business;
 using GanzenBord.Business.Factories;
 using GanzenBord.Business.Spaces;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ganzenbord.Business.Tests
 {
@@ -40,7 +35,6 @@ namespace Ganzenbord.Business.Tests
             //Assert
             Assert.That(testPlayer.CurrentSpace, Is.EqualTo(expectedSpace));
         }
-
 
         [TestCase(6, 3)]
         [TestCase(3, 6)]

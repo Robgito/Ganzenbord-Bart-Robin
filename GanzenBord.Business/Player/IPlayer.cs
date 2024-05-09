@@ -1,6 +1,4 @@
-﻿using Ganzenbord.Business.Dice;
-using Ganzenbord.Business.Logger;
-using Ganzenbord.Business.Spaces;
+﻿using Ganzenbord.Business.Logger;
 
 namespace Ganzenbord.Business.Player
 {
@@ -16,6 +14,7 @@ namespace Ganzenbord.Business.Player
         int[] lastRoll { get; set; }
 
         int CalculateDestination(int spacesToMove, int endOfBoard);
+
         void MoveTo(int spaceId);
     }
 }

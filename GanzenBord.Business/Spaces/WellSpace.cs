@@ -1,10 +1,5 @@
 ﻿using Ganzenbord.Business.Logger;
 using Ganzenbord.Business.Player;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ganzenbord.Business.Spaces
 {
@@ -19,18 +14,20 @@ namespace Ganzenbord.Business.Spaces
             SpaceID = spaceID;
             Logger = logger;
         }
+
         public override void SpaceEffect(IPlayer player)
         {
             if (PlayerStuckInWell != null)
             {
                 PlayerStuckInWell.CanMove = true;
-                printWell();
                 Logger.PrintMessage($"{player.Name} rescued {PlayerStuckInWell.Name}!");
+                printWell();
             }
             player.CanMove = false;
             PlayerStuckInWell = player;
-            printWell();
+
             Logger.PrintMessage($"{player.Name} fell in a well and will be unable to move until rescued!");
+            printWell();
         }
 
         public void printWell()

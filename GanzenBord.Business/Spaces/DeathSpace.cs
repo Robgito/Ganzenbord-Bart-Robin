@@ -13,11 +13,13 @@ namespace Ganzenbord.Business.Spaces
             SpaceID = spaceID;
             Logger = logger;
         }
+
         public override void SpaceEffect(IPlayer player)
         {
             player.CurrentSpace = 0;
-            printDeath();
+
             Logger.PrintMessage($"{player.Name} landed on Death! Go back to start!");
+            printDeath();
         }
 
         public void printDeath()

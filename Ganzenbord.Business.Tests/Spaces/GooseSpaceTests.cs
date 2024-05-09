@@ -1,15 +1,9 @@
-﻿using Ganzenbord.Business.Dice;
-using Ganzenbord.Business.Logger;
+﻿using Ganzenbord.Business.Logger;
 using Ganzenbord.Business.Player;
 using Ganzenbord.Business.Spaces;
 using GanzenBord.Business.Factories;
 using GanzenBord.Business.Spaces;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ganzenbord.Business.Tests.Spaces
 {

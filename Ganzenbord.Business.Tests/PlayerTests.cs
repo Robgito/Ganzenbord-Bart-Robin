@@ -1,12 +1,6 @@
-﻿using Ganzenbord.Business.Dice;
+﻿using Ganzenbord.Business.Logger;
 using Ganzenbord.Business.Player;
-using Ganzenbord.Business.Logger;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ganzenbord.Business.Tests
 {
@@ -18,7 +12,7 @@ namespace Ganzenbord.Business.Tests
             //Arrange
             int expectedSpace = 10;
 
-            Mock<ILogger> mockLogger = new Mock<ILogger> ();
+            Mock<ILogger> mockLogger = new Mock<ILogger>();
 
             IPlayer testPlayer = new Player.Player("testPlayer", mockLogger.Object);
 

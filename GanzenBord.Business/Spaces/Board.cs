@@ -1,10 +1,5 @@
 ﻿using Ganzenbord.Business.Spaces;
 using GanzenBord.Business.Factories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GanzenBord.Business.Spaces
 {
@@ -12,6 +7,7 @@ namespace GanzenBord.Business.Spaces
     {
         public List<ISpace> Spaces { get; set; }
         public ISpaceFactory SpaceFactory { get; set; }
+
         public Board(ISpaceFactory spaceFactory)
         {
             SpaceFactory = spaceFactory;

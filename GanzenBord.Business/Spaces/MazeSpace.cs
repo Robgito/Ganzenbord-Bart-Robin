@@ -1,10 +1,5 @@
 ﻿using Ganzenbord.Business.Logger;
 using Ganzenbord.Business.Player;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ganzenbord.Business.Spaces
 {
@@ -18,11 +13,13 @@ namespace Ganzenbord.Business.Spaces
             SpaceID = spaceID;
             Logger = logger;
         }
+
         public override void SpaceEffect(IPlayer player)
         {
             player.CurrentSpace = 39;
-            printMaze();
+
             Logger.PrintMessage($"{player.Name} landed on a Maze! Go to space nr. {player.CurrentSpace}!");
+            printMaze();
         }
 
         public void printMaze()

@@ -1,10 +1,5 @@
 ﻿using Ganzenbord.Business.Logger;
 using Ganzenbord.Business.Player;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ganzenbord.Business.Spaces
 {
@@ -18,10 +13,11 @@ namespace Ganzenbord.Business.Spaces
             SpaceID = spaceID;
             Logger = logger;
         }
+
         public override void SpaceEffect(IPlayer player)
         {
-            printMasterOfGeese();
             Logger.PrintMessage($"{player.Name} WINS!! You are The Master of Geese!");
+            printMasterOfGeese();
         }
 
         public void printMasterOfGeese()
@@ -33,7 +29,7 @@ namespace Ganzenbord.Business.Spaces
             Logger.PrintMessage("      \\`'-'-.  '.`\\      \\*____*/      /`.'  .-'-'`/");
             Logger.PrintMessage("    ,'-'-._  '.  ) )     /`    `\\     ( (  .'  _.-'-,");
             Logger.PrintMessage("    |\\'- _ '.   , /     /  /\"\"\\  \\     \\ ,  .'  _ -'/|");
-            Logger.PrintMessage("     \\'.   .  ; (      \\_|^  ^|_/      ) ;   .  .-'/'");
+            Logger.PrintMessage("     \\'.   .  ; (       \\_|^  ^|_/      ) ;   .  .-'/'");
             Logger.PrintMessage("      `'--, . ;  {`-.      \\__/      .-'}  ; . ,--'`");
             Logger.PrintMessage("      '--`_. ;  { ^  \\    _|  |_    /  ^ }  ; ._`--'");
             Logger.PrintMessage("      `,_.--  ;  { ^  `-'`      `'-`  ^ }  ;  --._,`");

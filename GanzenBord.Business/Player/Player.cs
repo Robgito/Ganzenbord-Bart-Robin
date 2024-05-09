@@ -1,6 +1,4 @@
 ﻿using Ganzenbord.Business.Logger;
-using Ganzenbord.Business.Spaces;
-using System.Numerics;
 
 namespace Ganzenbord.Business.Player
 {

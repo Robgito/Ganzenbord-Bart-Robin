@@ -1,17 +1,11 @@
-﻿
-using Ganzenbord.Business.Logger;
-using Ganzenbord.Business.Player;
-using Ganzenbord.Business.Spaces;
-using Ganzenbord.Logger;
-using GanzenBord.Business;
-using GanzenBord.Business.Factories;
+﻿using GanzenBord.Business;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Ganzenbord
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             ServiceCollection serviceCollection = new StartUp().RegisterServices();
             ServiceProvider provider = serviceCollection.BuildServiceProvider();

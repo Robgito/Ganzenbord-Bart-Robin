@@ -7,6 +7,7 @@ namespace Ganzenbord.Business.Spaces
     {
         ILogger Logger { get; set; }
         int SpaceID { get; set; }
+
         void SpaceEffect(IPlayer player);
     }
 }

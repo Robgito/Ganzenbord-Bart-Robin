@@ -1,11 +1,5 @@
 ﻿using Ganzenbord.Business.Logger;
 using Ganzenbord.Business.Player;
-using Ganzenbord.Business.Spaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GanzenBord.Business.Factories
 {

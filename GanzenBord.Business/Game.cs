@@ -26,7 +26,7 @@ namespace GanzenBord.Business
         public void StartGame()
         {
             logger.PrintMessage("|-=-| WELCOME TO GAME OF GOOSE |-=-|");
-            logger.PrintMessage("");
+            logger.WriteEmptyLine();
         }
 
         public IPlayer CreatePlayer(int playerNumber)
@@ -38,12 +38,16 @@ namespace GanzenBord.Business
         public void MultiplayerCreation()
         {
             logger.PrintMessage($"How many players will play the game?");
-            int playerAmount = Convert.ToInt32(logger.ReadInput());
-            logger.PrintMessage("");
+            int playerAmount;
+            while (!int.TryParse(logger.ReadInput(), out playerAmount))
+            {
+                logger.PrintMessage($"Please enter a number!");
+            }
+            logger.WriteEmptyLine();
             for (int i = 0; i < playerAmount; i++)
             {
                 playerList.Add(CreatePlayer(i + 1));
-                logger.PrintMessage("");
+                logger.WriteEmptyLine();
             }
         }
 
@@ -58,6 +62,7 @@ namespace GanzenBord.Business
             int[] diceRoll = dice.Roll(2);
             player.lastRoll = diceRoll;
 
+            PrintGameStandings(playerList);
             PlayerMove(player);
         }
 
@@ -169,6 +174,24 @@ namespace GanzenBord.Business
                 playerMoved = true;
             }
             return playerMoved;
+        }
+
+        public void PrintGameStandings(List<IPlayer> players)
+        {
+            logger.ClearConsole();
+            logger.PrintMessage("### CURRENT POSITIONS ###");
+            logger.WriteEmptyLine();
+
+            foreach (IPlayer player in players)
+            {
+                logger.PrintMessage($"{player.Name}: {player.CurrentSpace} ");
+                if (player.TurnsToSkip > 0)
+                {
+                    logger.PrintMessage($"Has to skip {player.TurnsToSkip} turn(s).");
+                }
+                logger.WriteEmptyLine();
+            }
+            logger.WriteEmptyLine();
         }
     }
 }

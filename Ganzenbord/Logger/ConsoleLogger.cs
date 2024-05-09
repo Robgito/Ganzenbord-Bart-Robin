@@ -1,9 +1,4 @@
 ﻿using Ganzenbord.Business.Logger;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ganzenbord.Logger
 {
@@ -18,6 +13,16 @@ namespace Ganzenbord.Logger
         public string ReadInput()
         {
             return Console.ReadLine();
+        }
+
+        public void WriteEmptyLine()
+        {
+            Console.WriteLine("");
+        }
+
+        public void ClearConsole()
+        {
+            Console.Clear();
         }
     }
 }

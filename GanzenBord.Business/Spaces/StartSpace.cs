@@ -14,6 +14,7 @@ namespace GanzenBord.Business.Spaces
             SpaceID = spaceID;
             Logger = logger;
         }
+
         public override void SpaceEffect(IPlayer player)
         {
             Logger.PrintMessage($"{player.Name} is went back to Start!");
