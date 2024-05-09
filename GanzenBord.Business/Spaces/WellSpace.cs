@@ -24,11 +24,44 @@ namespace Ganzenbord.Business.Spaces
             if (PlayerStuckInWell != null)
             {
                 PlayerStuckInWell.CanMove = true;
+                printWell();
                 Logger.PrintMessage($"{player.Name} rescued {PlayerStuckInWell.Name}!");
             }
             player.CanMove = false;
             PlayerStuckInWell = player;
+            printWell();
             Logger.PrintMessage($"{player.Name} fell in a well and will be unable to move until rescued!");
+        }
+
+        public void printWell()
+        {
+            Logger.PrintMessage("                 __");
+            Logger.PrintMessage("               .'/\\'.");
+            Logger.PrintMessage("             .'-/__\\-'.");
+            Logger.PrintMessage("           .'--/____\\--'.");
+            Logger.PrintMessage("         .'--./______\\.--'.");
+            Logger.PrintMessage("       .'--../________\\..--'.");
+            Logger.PrintMessage("     .'--.._/__________\\__..--'.");
+            Logger.PrintMessage("   .'--..__/____________\\__..--'.");
+            Logger.PrintMessage(" .'--..___/______________\\___..--'.");
+            Logger.PrintMessage("'========'================'========'");
+            Logger.PrintMessage("      [_|__]            [_|__]");
+            Logger.PrintMessage("     =[__|_]=====''=====[__|_]==.");
+            Logger.PrintMessage("      [__|_]     ||     [__|_]  |");
+            Logger.PrintMessage("      [_|__]  .--JL--.  [_|__]  '===O");
+            Logger.PrintMessage("      [__|_]   \\====/   [__|_]");
+            Logger.PrintMessage("      [_|__]_.-| .; |-._[_|__]");
+            Logger.PrintMessage("      [__|_]'._ \\__/(_.'[__|_]");
+            Logger.PrintMessage("      [.-._]            [_.-.]");
+            Logger.PrintMessage("      [_.-.'--..____..--'.-._]");
+            Logger.PrintMessage("      [(_.'   .-.     .-.'._)\\ ");
+            Logger.PrintMessage("      [  .-. (_.'.-. (_.' .-.]");
+            Logger.PrintMessage("      [ (_.'.-. (_.' .-. (_.'|   ");
+            Logger.PrintMessage("      /.-.  (_.'.-.  (_.' .-.]     ");
+            Logger.PrintMessage("     ['._).-. (_.'   .-.(_.'] ");
+            Logger.PrintMessage("      [   (_.'.-.  .-.'._)   \\   ");
+            Logger.PrintMessage("      '-._    '._) '._)   _.-'");
+            Logger.PrintMessage("           `---..____..---'      ");
         }
     }
 }

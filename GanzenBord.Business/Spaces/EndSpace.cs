@@ -20,7 +20,41 @@ namespace Ganzenbord.Business.Spaces
         }
         public override void SpaceEffect(IPlayer player)
         {
+            printMasterOfGeese();
             Logger.PrintMessage($"{player.Name} wins!");
+        }
+
+        public void printMasterOfGeese()
+        {
+            Logger.PrintMessage("         ,                                      ,");
+            Logger.PrintMessage("        |\\                                      /|");
+            Logger.PrintMessage("     ,   \\'._ ,                           ,  _.'/   ,");
+            Logger.PrintMessage("     |\\  {'. '-`\\,      ,-._**_.-,      ,/'-' .'}  /|");
+            Logger.PrintMessage("      \\`'-'-.  '.`\\      \\*____*/      /`.'  .-'-'`/");
+            Logger.PrintMessage("    ,'-'-._  '.  ) )     /`    `\\     ( (  .'  _.-'-,");
+            Logger.PrintMessage("    |\\'- _ '.   , /     /  /\"\"\\  \\     \\ ,  .'  _ -'/|");
+            Logger.PrintMessage("     \\'.   .  ; (      \\_|^  ^|_/      ) ;   .  .-'/'");
+            Logger.PrintMessage("      `'--, . ;  {`-.      \\__/      .-'}  ; . ,--'`");
+            Logger.PrintMessage("      '--`_. ;  { ^  \\    _|  |_    /  ^ }  ; ._`--'");
+            Logger.PrintMessage("      `,_.--  ;  { ^  `-'`      `'-`  ^ }  ;  --._,`");
+            Logger.PrintMessage("        ,_.-    ; {^    /        \\    ^} ;    -._,");
+            Logger.PrintMessage("         ,_.-`), /\\{^,/\\\\_'_/\\_'_//\\,^}/\\ ,(`-._,");
+            Logger.PrintMessage("           _.'.-` /.'   \\        /   `.\\ `-.'._");
+            Logger.PrintMessage("          `  _.' `       \\      /       ` '._   `");
+            Logger.PrintMessage("                        .-'.  .'-.");
+            Logger.PrintMessage("                      .'    `` ^  '.");
+            Logger.PrintMessage("                     /  ^ ^   ^  ^  \\");
+            Logger.PrintMessage("                     | ^    ^   ^   |");
+            Logger.PrintMessage("                    /^   ^/    \\  ^  \\");
+            Logger.PrintMessage("                    \\,_^_/    ^ \\_,^./");
+            Logger.PrintMessage("                     /=/  \\^   /  \\=\\");
+            Logger.PrintMessage("                 __ /=/_   | ^|   _\\=\\ __");
+            Logger.PrintMessage("               <(=,'=(==,) |  | (,==)=',=)>");
+            Logger.PrintMessage("                 /_/|_\\    /  \\    /_|\\_\\");
+            Logger.PrintMessage("                 `V (=|  .'    '.  |=) V`");
+            Logger.PrintMessage("                     V  / _/  \\_ \\  V");
+            Logger.PrintMessage("                       `\"` \\  / `\"`");
+            Logger.PrintMessage("                            \\(");
         }
     }
 }

@@ -23,8 +23,25 @@ namespace Ganzenbord.Business.Spaces
         }
         public override void SpaceEffect(IPlayer player)
         {
+            PrintGoose();
             Logger.PrintMessage($"{player.Name} landed on a goose! Move the same amount of spaces again!");
             player.MoveTo(player.CalculateDestination(player.lastRoll.Sum(), Board.Spaces.Count - 1));
+        }
+        public void PrintGoose()
+        {
+            Logger.PrintMessage("      _.-.");
+            Logger.PrintMessage(" __.-' ,  \\");
+            Logger.PrintMessage("'--'-'._   \\");
+            Logger.PrintMessage("        '.  \\");
+            Logger.PrintMessage("         )-- \\ __.--._");
+            Logger.PrintMessage("        /   .'        '--.");
+            Logger.PrintMessage("       .               _/-._");
+            Logger.PrintMessage("       :       ____._/   _-'");
+            Logger.PrintMessage("        '._          _.'-'");
+            Logger.PrintMessage("           '-._    _.'");
+            Logger.PrintMessage("               \\_|/");
+            Logger.PrintMessage("              __|||");
+            Logger.PrintMessage("              >__/'");
         }
     }
 }

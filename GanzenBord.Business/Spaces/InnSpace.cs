@@ -21,7 +21,28 @@ namespace Ganzenbord.Business.Spaces
         public override void SpaceEffect(IPlayer player)
         {
             player.TurnsToSkip = 1;
+            printInn();
             Logger.PrintMessage($"{player.Name} landed on an inn! Skip 1 turn!");
+        }
+
+        public void printInn()
+        {
+            Logger.PrintMessage("         (");
+            Logger.PrintMessage("           )");
+            Logger.PrintMessage("         ( _   _._");
+            Logger.PrintMessage("          |_|-'_~_`-._");
+            Logger.PrintMessage("       _.-'-_~_-~_-~-_`-._");
+            Logger.PrintMessage("   _.-'_~-_~-_-~-_~_~-_~-_`-._");
+            Logger.PrintMessage("  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Logger.PrintMessage("    |  []  []   []   []  [] |");
+            Logger.PrintMessage("    |           __    ___   |");
+            Logger.PrintMessage("  ._|  []  []  | .|  [___]  |_._.");
+            Logger.PrintMessage("  |=|________()|__|()_______|=|=");
+            Logger.PrintMessage("^^^^^^^^^^^^^^^ === ^^^^^^^^^^^^^^^");
+            Logger.PrintMessage("    _______      ===");
+            Logger.PrintMessage("   <__INN__>       ===");
+            Logger.PrintMessage("      ^|^             ===");
+            Logger.PrintMessage("       |                 ===");
         }
     }
 }
