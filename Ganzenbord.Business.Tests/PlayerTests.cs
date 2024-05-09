@@ -32,6 +32,7 @@ namespace Ganzenbord.Business.Tests
         [Test]
         public void WhenPlayerMovesForward_ThenSpacesMustAddUp()
         {
+            //Arrange
             int currentSpace = 10;
             int spacesToMove = 5;
             int expectedSpace = 15;
@@ -42,14 +43,17 @@ namespace Ganzenbord.Business.Tests
             IPlayer testPlayer = new Player.Player("testPlayer", mockLogger.Object);
             testPlayer.CurrentSpace = currentSpace;
 
+            //Act
             int destination = testPlayer.CalculateDestination(spacesToMove, endOfBoard);
 
+            //Assert
             Assert.That(destination, Is.EqualTo(expectedSpace));
         }
 
         [Test]
         public void WhenPlayerMovesBackwards_ThenSpacesMustBeSubstracted()
         {
+            //Arrange
             int currentSpace = 10;
             int spacesToMove = 5;
             int expectedSpace = 5;
@@ -61,8 +65,10 @@ namespace Ganzenbord.Business.Tests
             testPlayer.CurrentSpace = currentSpace;
             testPlayer.Direction = Direction.backwards;
 
+            //Act
             int destination = testPlayer.CalculateDestination(spacesToMove, endOfBoard);
 
+            //Assert
             Assert.That(destination, Is.EqualTo(expectedSpace));
         }
     }

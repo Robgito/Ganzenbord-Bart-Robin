@@ -18,6 +18,7 @@ namespace Ganzenbord.Business.Tests.Spaces
         [Test]
         public void IfPlayerLandsOnGoose_ThenPlayerMovesSameAmountOfSpacesAgain()
         {
+            //Arrange
             int[] diceRoll = [5, 5];
             int currentSpace = 10;
             int expectedDestination = 20;
@@ -31,8 +32,10 @@ namespace Ganzenbord.Business.Tests.Spaces
             testPlayer.CurrentSpace = currentSpace;
             ISpace testGooseSpace = new GooseSpace(10, mockLogger.Object, testBoard);
 
+            //Act
             testGooseSpace.SpaceEffect(testPlayer);
 
+            //Assert
             Assert.That(testPlayer.CurrentSpace, Is.EqualTo(expectedDestination));
         }
     }
