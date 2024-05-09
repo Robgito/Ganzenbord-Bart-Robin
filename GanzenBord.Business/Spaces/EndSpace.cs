@@ -20,12 +20,8 @@ namespace Ganzenbord.Business.Spaces
         }
         public override void SpaceEffect(IPlayer player)
         {
-<<<<<<< HEAD
             printMasterOfGeese();
-            Logger.PrintMessage($"{player.Name} wins!");
-=======
             Logger.PrintMessage($"{player.Name} WINS!! You are The Master of Geese!");
->>>>>>> 79b5d9b3e0439b92fe3d1d0ffece549aee71aac4
         }
 
         public void printMasterOfGeese()
