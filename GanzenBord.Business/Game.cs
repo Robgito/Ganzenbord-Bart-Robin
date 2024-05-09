@@ -46,9 +46,9 @@ namespace GanzenBord.Business
         {
             logger.PrintMessage($"How many players will play the game?");
             int playerAmount;
-            while (!int.TryParse(logger.ReadInput(), out playerAmount))
+            while (!int.TryParse(logger.ReadInput(), out playerAmount) || playerAmount <= 0 || playerAmount > 4)
             {
-                logger.PrintMessage($"Please enter a number!");
+                logger.PrintMessage($"Wrong input! Please enter a number from 1 to 4!");
             }
             logger.WriteEmptyLine();
             for (int i = 0; i < playerAmount; i++)

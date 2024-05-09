@@ -20,13 +20,11 @@ namespace Ganzenbord.Business.Tests
             Mock<ILogger> mockLogger = new Mock<ILogger>();
             Mock<IPlayerFactory> mockPlayerFactory = new Mock<IPlayerFactory>();
             Mock<IDice> mockDice = new Mock<IDice>();
-            Mock<ISpaceFactory> mockSpaceFactory = new Mock<ISpaceFactory>();
 
             ISpaceFactory testSpaceFactory = new SpaceFactory(mockLogger.Object);
             IBoard testBoard = new Board(testSpaceFactory);
             IGame testGame = new Game(mockLogger.Object, mockPlayerFactory.Object, mockDice.Object, testBoard);
             IPlayer testPlayer = new Player.Player("testPlayer", mockLogger.Object);
-            testPlayer.CurrentSpace = 0;
             testPlayer.lastRoll = [diceroll1, diceroll2];
 
             //Act
@@ -46,13 +44,11 @@ namespace Ganzenbord.Business.Tests
             Mock<ILogger> mockLogger = new Mock<ILogger>();
             Mock<IPlayerFactory> mockPlayerFactory = new Mock<IPlayerFactory>();
             Mock<IDice> mockDice = new Mock<IDice>();
-            Mock<ISpaceFactory> mockSpaceFactory = new Mock<ISpaceFactory>();
 
             ISpaceFactory testSpaceFactory = new SpaceFactory(mockLogger.Object);
             IBoard testBoard = new Board(testSpaceFactory);
             IGame testGame = new Game(mockLogger.Object, mockPlayerFactory.Object, mockDice.Object, testBoard);
             IPlayer testPlayer = new Player.Player("testPlayer", mockLogger.Object);
-            testPlayer.CurrentSpace = 0;
             testPlayer.lastRoll = [diceroll1, diceroll2];
 
             //Act
@@ -71,7 +67,6 @@ namespace Ganzenbord.Business.Tests
             Mock<ILogger> mockLogger = new Mock<ILogger>();
             Mock<IPlayerFactory> mockPlayerFactory = new Mock<IPlayerFactory>();
             Mock<IDice> mockDice = new Mock<IDice>();
-            Mock<ISpaceFactory> mockSpaceFactory = new Mock<ISpaceFactory>();
 
             ISpaceFactory testSpaceFactory = new SpaceFactory(mockLogger.Object);
             IBoard testBoard = new Board(testSpaceFactory);
@@ -95,7 +90,6 @@ namespace Ganzenbord.Business.Tests
             Mock<ILogger> mockLogger = new Mock<ILogger>();
             Mock<IPlayerFactory> mockPlayerFactory = new Mock<IPlayerFactory>();
             Mock<IDice> mockDice = new Mock<IDice>();
-            Mock<ISpaceFactory> mockSpaceFactory = new Mock<ISpaceFactory>();
 
             ISpaceFactory testSpaceFactory = new SpaceFactory(mockLogger.Object);
             IBoard testBoard = new Board(testSpaceFactory);
