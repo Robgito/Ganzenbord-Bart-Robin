@@ -15,6 +15,7 @@ namespace Ganzenbord.Business.Tests.Spaces
         [Test]
         public void WhenPlayerLandsOnMaze_ThenPlayerGoesToSpace39()
         {
+            //Arrange
             int expectedSpace = 39;
 
             Mock<ILogger> mockLogger = new Mock<ILogger>();
@@ -22,8 +23,10 @@ namespace Ganzenbord.Business.Tests.Spaces
             IPlayer testPlayer = new Player.Player("testPlayer", mockLogger.Object);
             ISpace testMazeSpace = new MazeSpace(42, mockLogger.Object);
 
+            //Act
             testMazeSpace.SpaceEffect(testPlayer);
 
+            //Assert
             Assert.That(testPlayer.CurrentSpace, Is.EqualTo(expectedSpace));
         }
     }

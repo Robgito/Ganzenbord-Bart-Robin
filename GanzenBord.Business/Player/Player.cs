@@ -52,7 +52,7 @@ namespace Ganzenbord.Business.Player
             return destination;
         }
 
-        public void ChangeDirection()
+        private void ChangeDirection()
         {
             if (Direction == Direction.forwards)
             {
