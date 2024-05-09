@@ -7,6 +7,8 @@ namespace Ganzenbord
     {
         private static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.ForegroundColor = ConsoleColor.Green;
             ServiceCollection serviceCollection = new StartUp().RegisterServices();
             ServiceProvider provider = serviceCollection.BuildServiceProvider();
             IGame game = provider.GetService<IGame>();
