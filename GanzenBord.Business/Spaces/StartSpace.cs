@@ -17,7 +17,7 @@ namespace GanzenBord.Business.Spaces
 
         public override void SpaceEffect(IPlayer player)
         {
-            Logger.PrintMessage($"{player.Name} is went back to Start!");
+            Logger.PrintMessage($"{player.Name} went back to Start!");
         }
     }
 }
